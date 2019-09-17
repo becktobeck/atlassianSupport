@@ -13,7 +13,7 @@ pipeline {
          }
          stage('Deploy - Staging') {
              when {
-                 branch 'master'
+                 branch 'MS-62-jenkins-branch'
              }
              steps {
                  echo 'Deploying to Staging from master...'
@@ -26,7 +26,7 @@ pipeline {
          }
          stage('Deploy - Production') {
             when {
-                branch 'master'
+                branch 'MS-62-jenkins-branch'
             }
             steps {
                 echo 'Deploying to Production from master...'
